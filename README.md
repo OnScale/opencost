@@ -6,7 +6,7 @@ This branch provides the changes to the `onscale` branch which are [OnScale](htt
 
 # Statement of Work
 
-The maintainer of this repo, [ryanpeach](https://github.com/ryanpeach) firmly believes that cost monitoring should be free. Cost monitoring should not cost money, because to pay to save money or to calculate spend is a conflict of interests.
+The maintainer of this repo, [ryanpeach](https://github.com/ryanpeach) firmly believes that cost monitoring should be free. Cost monitoring should not cost money, because to pay to save money or to calculate spend is a conflict of interests, and just not very useful.
 
 No GUI code will be supported, instead focusing on grafana and other prometheus stack tools to provide the UI and monitoring framework.
 
