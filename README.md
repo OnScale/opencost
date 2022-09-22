@@ -30,20 +30,20 @@ Rules:
 ```mermaid
 gitGraph
   commit id: "Forked commit"
-  branch develop
+  branch onscale
   checkout main
   commit id: "New opencost version"
-  checkout develop
+  checkout onscale
   merge main
   commit id: "Begin Development"
   branch feature
   commit id: "New feature"
-  checkout develop
+  checkout onscale
   merge feature
   checkout main
   merge feature
   commit id: "PR Accepted"
-  checkout develop
+  checkout onscale
   merge main
 ```
 
