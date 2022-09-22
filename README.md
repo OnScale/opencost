@@ -2,7 +2,15 @@
 
 # OnScale OpenCost Fork
 
-This branch provides the changes to the `develop` branch which are onscale specific.
+This branch provides the changes to the `onscale` branch which are [OnScale](http://www.onscale.com) specific.
+
+# Statement of Work
+
+The maintainer of this repo, [ryanpeach](https://github.com/ryanpeach) firmly believes that cost monitoring should be free. Cost monitoring should not cost money, because to pay to save money or to calculate spend is a conflict of interests.
+
+No GUI code will be supported, instead focusing on grafana and other prometheus stack tools to provide the UI and monitoring framework.
+
+# Contribution
 
 **We need to ensure the `develop` branch can sync upstream and downstream with [opencost/opencost](https://github.com/opencost/opencost)**
 
