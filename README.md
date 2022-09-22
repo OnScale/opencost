@@ -11,7 +11,7 @@ Rules:
 
 * The `develop` branch should stay syncronized with `opencost/opencost:develop`.
 
-* `feature` branches should branch from `develop`
+* `feature` branches should branch from `develop`. If you don't do this you wont be able to submit the feature upstream. Never let the `develop` branch get poluted with unaccepted features or OnScale specific deployment code.
 
 * `feature` branches should PR to `opencost/opencost:develop` AND to `onscale/opencost:onscale`
 
