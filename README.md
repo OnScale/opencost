@@ -9,28 +9,34 @@ This branch provides the changes to the `develop` branch which are onscale speci
 
 Rules:
 
-* The `onscale` branch should only ever merge the `develop` branch.
-* `feature` branches should branch from and PR to `develop`
+* The `develop` branch should stay syncronized with `opencost/opencost:develop`.
 
-The merging pattern looks like this:
+* `feature` branches should branch from `develop`
+
+* `feature` branches should PR to `opencost/opencost:develop` AND to `onscale/opencost:onscale`
+
+* If the PR to `opencost/opencost:develop` is accepted, you should sync `develop` with `opencost/opencost:develop` and then merge `onscale/opencost:develop` into `onscale/opencost:onscale`
+
+**In this diagram `opencost/opencost:develop` is called `main` due to limitations of mermaid.**
 
 ```mermaid
 gitGraph
+  commit id: "Forked commit"
   branch develop
-  commit
-  commit
-  branch onscale
-  commit
+  checkout main
+  commit id: "New opencost version"
   checkout develop
-  commit
+  merge main
+  commit id: "Begin Development"
+  branch feature
+  commit id: "New feature"
   checkout develop
-  branch feature/example
-  commit
+  merge feature
+  checkout main
+  merge feature
+  commit id: "PR Accepted"
   checkout develop
-  merge feature/example
-  commit
-  checkout onscale
-  merge develop
+  merge main
 ```
 
 # OpenCost — your favorite open source cost monitoring tool for Kubernetes
