@@ -1,5 +1,34 @@
 <img src="./opencost-header.png"/>
 
+# OnScale OpenCost Fork
+
+This branch provides the changes to the `develop` branch which are onscale specific.
+
+**We need to ensure the `develop` branch can sync upstream and downstream with [opencost/opencost](https://github.com/opencost/opencost)**
+
+The merging pattern looks like this:
+
+```mermaid
+gitGraph
+  branch develop
+  commit
+  branch onscale
+  commit
+  checkout develop
+  branch feature/*
+  commit
+  commit
+  checkout develop
+  merge feature/*
+  checkout onscale
+  merge develop
+```
+
+Rules:
+
+* The `onscale` branch should only ever merge the `develop` branch.
+* `feature` branches should branch from and PR to `develop`
+  
 # OpenCost — your favorite open source cost monitoring tool for Kubernetes
 
 OpenCost models give teams visibility into current and historical Kubernetes spend and resource allocation. These models provide cost transparency in Kubernetes environments that support multiple applications, teams, departments, etc.
